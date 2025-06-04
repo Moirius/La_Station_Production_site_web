@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>La Station Production</title>
+
+    <!-- Balises SEO -->
+    <meta name="description" content="La Station Production - Production vidéo à Rennes. Captation, clips, reportages, films d'entreprise.">
+    <meta name="keywords" content="vidéo, Rennes, production, clip, live, captation, film, entreprise, reportage, aftermovie">
+    <meta name="author" content="La Station Production">
+    <meta property="og:title" content="La Station Production">
+    <meta property="og:description" content="Création de contenus vidéo à Rennes. Clips, lives, reportages, captations, publicités.">
+    <meta property="og:image" content="https://lastation-prod.com/miniatures/elements/LOGO_LA_STATION-04.png">
+    <meta property="og:url" content="https://lastation-prod.com/">
+    <meta property="og:type" content="website">
+    
+    <link rel="icon" type="image/png" href="favicon.png?v=3">
+
+   <script type="application/ld+json">
+    {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "La Station Production",
+    "url": "https://lastation-prod.com",
+    "logo": "https://lastation-prod.com/favicon.png"
+    }
+    </script>
+     
+
+
+    <!-- Lien vers la feuille de styles -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div id="mobile-chatbot-trigger" onclick="window.location.href='chatbot.html'">
+  <img src="./miniatures/elements/chatbot-button.png" alt="Ouvrir le chatbot">
+</div>
+
+    <!-- Logo principal -->
+    <div id="logo-container" class="logo-large">
+        <img src="./miniatures/elements/LOGO_LA_STATION_transp.png" id="logo-image" alt="Logo du site">
+    </div>
+
+    <!-- Texte descriptif -->
+    <div id="description">
+        <h1 class="responsive-title">
+            <button id="chatbot-button">CRÉATION DE VIDÉOS</button>
+        </h1>
+        <p>06 75 61 11 72<br>
+            <a href="https://www.instagram.com/lastation.prod?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank" class="unstyled-link">@Lastation.prod</a><br>
+            contact@lastation-prod.com
+        </p>
+    </div>
+
+
+
+    <!-- Section des boutons de filtrage -->
+    <div id="filter-buttons">
+        <button class="filter-btn ratio-16-9" data-type="clip">Clips</button>
+        <button class="filter-btn ratio-16-9" data-type="live">Lives</button>
+        <button class="filter-btn ratio-1-1" data-type="live session">Live<br>Sessions</button>
+        <button class="filter-btn ratio-19-9" data-type="After Movie">After<br>Movies</button>
+    </div>
+
+    <!-- Conteneur principal pour la grille -->
+    <div class="moodboard-container moodboard-reduced">
+        <div class="moodboard-grid"></div>
+    </div>
+
+    <!-- Fenêtre modale pour afficher les vidéos YouTube -->
+    <div id="youtube-modal" class="modal">
+        <div class="modal-content">
+            <span class="close close-modal">&times;</span>
+            <iframe 
+                id="youtube-player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+            </iframe>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/scrollbooster@3/dist/scrollbooster.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"></script>
+    <script src="navigation.js"></script>
+    <script src="script.js"></script>
+
+    <div id="log-list" style="position: fixed; bottom: 0; left: 0; width: 100%; max-height: 200px; overflow-y: auto; background: rgba(0, 0, 0, 0.9); color: white; font-size: 12px; padding: 10px; z-index: 10000;"></div>
+
+    <script>
+        window.addEventListener("DOMContentLoaded", async () => {
+            const existing = sessionStorage.getItem("initialResponse");
+            if (existing) return;
+
+            const res = await fetch("https://chatbot-o4gm.onrender.com/ask", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ query: "C'est quoi La Station Production ?" })
+            });
+
+            const data = await res.json();
+            const raw = data.answer?.content || "Réponse indisponible pour le moment.";
+            sessionStorage.setItem("initialResponse", raw);
+        });
+    </script>
+</body>
+</html>
