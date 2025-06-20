@@ -33,6 +33,11 @@ class GridNavigation {
         this.touchStartX = 0;
         this.touchStartY = 0;
 
+        // Zoom
+        this.scale = 1;
+        this.targetScale = 1;
+        this.ZOOM_SPEED = 0.1;
+
 
         // Lier les méthodes au contexte de la classe
         this.animate = this.animate.bind(this);
@@ -109,6 +114,10 @@ class GridNavigation {
 
         this.isDragging = false;
         this.grid.style.cursor = 'grab';
+    }
+
+    handleWheel(e) {
+        e.preventDefault();
     }
 
     
