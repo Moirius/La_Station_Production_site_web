@@ -164,7 +164,7 @@
 }
 
 #description h1 {
-  font-size: 5.5vh;
+  font-size: clamp(1.5rem, 6vmin, 5vh);
   font-weight: bold;
 
   line-height: 25vh;
@@ -174,7 +174,7 @@
 #chatbot-button {
   all: unset;
   display: inline-block;
-  font-size: 5.5vh;
+  font-size: clamp(1.5rem, 6vmin, 5vh);
  
   background-color: white;
   color: black;
@@ -196,8 +196,8 @@
 
 
 #description p {
-  font-size: 3.5vh;
-  line-height: 3vh;
+  font-size: clamp(1rem, 3vmin, 2rem);
+  line-height: 1.4;
 }
 
 
@@ -220,12 +220,12 @@
   border: none;
   color: white;
   font-family: 'arges', sans-serif; /* Police intégrée */
-  font-size: 13vh;
+  font-size: clamp(1.2rem, 6vmin, 4rem);
   text-transform: uppercase;
   text-align: left;
   cursor: pointer;
   transition: color 0.3s;
-  line-height: 11vh; /* Espacement entre les lignes à l'intérieur d'un bouton */
+  line-height: 1.1; /* Espacement entre les lignes à l'intérieur d'un bouton */
   /* font-weight: 9vh; */
   /* Supprimer `gap` ici car ce n'est pas applicable */
 }
@@ -358,8 +358,8 @@ img.loaded {
 
 .modal-content {
   position: relative;
-  width: 80vh;
-  max-width: 80vh;
+  width: 90vw;
+  max-width: 90vw;
   margin: auto; /* Centre le contenu horizontalement */
   user-select: none;
 }
@@ -377,8 +377,8 @@ img.loaded {
 } */
 
 iframe {
-  width: 80vh;
-  height: 40vh;
+  width: 90vw;
+  height: 50vw;
 
 }
 
@@ -447,7 +447,7 @@ body.pointer-locked:active {
   font-size: 2vh;
   color: white;
   font-weight: 9vh;
-  /* letter-spacing: -0.02vh; */
+  /* letter-spacing: -0.0clamp(0.8rem,2vmin,1.5rem); */
 }
 
 .credits-section {
@@ -456,7 +456,7 @@ body.pointer-locked:active {
 
 .credits-role {
   color: rgb(255, 255, 255);
-  font-size: 1.5vh;
+  font-size: clamp(0.7rem,1.5vmin,1.2rem);
   margin-bottom: 0.03vh;
   font-weight: 900;
   letter-spacing: 0.05vh;
@@ -553,7 +553,7 @@ body.pointer-locked:active {
   }
   
   .filter-btn {
-    font-size: 7vh;
+    font-size: clamp(1.2rem, 6vmin, 4rem);
     line-height: 6vh; /* Espacement entre les lignes à l'intérieur d'un bouton */
   }
 
@@ -578,7 +578,7 @@ body.pointer-locked:active {
   }
   
   #description h1 {
-    font-size: 2.5vh;
+    font-size: clamp(1rem,2.5vmin,2rem);
     line-height: 5vh;
   }
 
@@ -586,7 +586,7 @@ body.pointer-locked:active {
 
 #chatbot-button {
 
-  font-size: 2.3vh;
+  font-size: clamp(1rem,2vmin,1.8rem);
  
 }
 
@@ -601,15 +601,15 @@ body.pointer-locked:active {
 
 /* ---- Style de la fenêtre modale ---- */
 .modal-content {
-width: 40vh;
-max-width: 40vh;
+width: 90vw;
+max-width: 90vw;
 bottom: 20vh;
 }
 
 
 iframe {
-width: 40vh;
-height: 20vh;
+width: 90vw;
+height: 50vw;
 }
 
 
@@ -715,7 +715,7 @@ height: 20vh;
   }
   
   .filter-btn {
-    font-size: 12vh;
+    font-size: clamp(1.2rem, 6vmin, 4rem);
     line-height: 10vh; /* Espacement entre les lignes à l'intérieur d'un bouton */
   }
 
@@ -740,7 +740,7 @@ height: 20vh;
     left: 3vh;
   }
   #description h1 {
-  font-size: 5.5vh;
+  font-size: clamp(1.5rem, 6vmin, 5vh);
   font-weight: bold;
 
   line-height: 5vh;
@@ -748,7 +748,7 @@ height: 20vh;
 }
 
 #chatbot-button {
-  font-size: 5.5vh;
+  font-size: clamp(1.5rem, 6vmin, 5vh);
 
 }
 
@@ -756,21 +756,21 @@ height: 20vh;
 
   
   #description p {
-    font-size: 3vh;
+    font-size: clamp(1rem, 3vmin, 2rem);
     line-height: 4vh;
   }
 
 /* ---- Style de la fenêtre modale ---- */
 .modal-content {
-width: 40vh;
-max-width: 40vh;
+width: 90vw;
+max-width: 90vw;
 bottom: 20vh;
 }
 
 
 iframe {
-width: 40vh;
-height: 20vh;
+width: 90vw;
+height: 50vw;
 }
 
 
@@ -869,7 +869,7 @@ height: 20vh;
   }
   
   .filter-btn {
-    font-size: 6vh;
+    font-size: clamp(1.2rem, 6vmin, 4rem);
     line-height: 5vh; /* Espacement entre les lignes à l'intérieur d'un bouton */
     
   }
@@ -896,7 +896,7 @@ height: 20vh;
   
   #description h1 {
     font-size: 2.8vh;
-    line-height: 3vh;
+    line-height: 1.4;
   }
 
   #chatbot-button {
@@ -911,15 +911,15 @@ height: 20vh;
 
 /* ---- Style de la fenêtre modale ---- */
 .modal-content {
-width: 40vh;
-max-width: 40vh;
+width: 90vw;
+max-width: 90vw;
 bottom: 20vh;
 }
 
 
 iframe {
-width: 40vh;
-height: 20vh;
+width: 90vw;
+height: 50vw;
 }
 
 
@@ -963,7 +963,7 @@ height: 20vh;
   }
   
   .filter-btn {
-    font-size: 12vh;
+    font-size: clamp(1.2rem, 6vmin, 4rem);
     line-height: 10vh; /* Espacement entre les lignes à l'intérieur d'un bouton */
   }
 
@@ -989,8 +989,8 @@ height: 20vh;
   }
   
   #description h1 {
-    font-size: 3vh;
-    line-height: 20vh;
+    font-size: clamp(1rem, 3vmin, 2rem);
+    line-height: 1.2;
   }
     #chatbot-button {
   font-size: 4vh;
@@ -998,21 +998,21 @@ height: 20vh;
 }
   
   #description p {
-    font-size: 3vh;
+    font-size: clamp(1rem, 3vmin, 2rem);
     line-height: 4vh;
   }
 
 /* ---- Style de la fenêtre modale ---- */
 .modal-content {
-width: 40vh;
-max-width: 40vh;
+width: 90vw;
+max-width: 90vw;
 bottom: 10vh;
 }
 
 
 iframe {
-width: 40vh;
-height: 20vh;
+width: 90vw;
+height: 50vw;
 }
 
 
@@ -1062,7 +1062,7 @@ height: 20vh;
   }
   
   .filter-btn {
-    font-size: 12vh;
+    font-size: clamp(1.2rem, 6vmin, 4rem);
     line-height: 10vh; /* Espacement entre les lignes à l'intérieur d'un bouton */
   }
 
@@ -1089,7 +1089,7 @@ height: 20vh;
   
   #description h1 {
     font-size: 4.5vh;
-    line-height: 20vh;
+    line-height: 1.2;
   }
 
       #chatbot-button {
@@ -1098,21 +1098,21 @@ height: 20vh;
 }
   
   #description p {
-    font-size: 3vh;
+    font-size: clamp(1rem, 3vmin, 2rem);
     line-height: 4vh;
   }
 
 /* ---- Style de la fenêtre modale ---- */
 .modal-content {
-width: 40vh;
-max-width: 40vh;
+width: 90vw;
+max-width: 90vw;
 bottom: 10vh;
 }
 
 
 iframe {
-width: 40vh;
-height: 20vh;
+width: 90vw;
+height: 50vw;
 }
 
 
